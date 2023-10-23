@@ -10,9 +10,9 @@ string path = $"{directory}\\{file}";
 var context = new CustomerDBContext();
 
 // Using a file data provider
-var customerDataProvider = new FileCustomerDataProvider(path);
+//var customerDataProvider = new FileCustomerDataProvider(path);
 // Using a database data provider
-//var customerDataProvider = new DatabaseCustomerDataProvider(context);
+var customerDataProvider = new DatabaseCustomerDataProvider(context);
 
 //5.- Populate the list with at least three customers populating all values for each object
 
