@@ -4,21 +4,15 @@
 //	Age (integer): Age of the customer.
 //	Email (string): Email address of the customer.
 
-
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CustomerConsole;
+namespace CustomerConsole.Models;
 
 public class Customer
 {
     [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.None)]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
 
     [Required]
@@ -30,7 +24,6 @@ public class Customer
 
     [Required]
     [MaxLength(100)]
+    [DataType(DataType.EmailAddress)]
     public string Email { get; set; } = string.Empty;
-
-
 }
