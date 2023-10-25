@@ -33,7 +33,6 @@ public class DatabaseCustomerDataProvider : ICustomerDataProvider
 
     public async Task<bool> SaveCustomerList(List<Customer> customerList)
     {
-
         _context.Customers.AddRange(customerList);
         return (await _context.SaveChangesAsync() >= 0);
     }

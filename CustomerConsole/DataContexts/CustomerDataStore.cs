@@ -1,9 +1,4 @@
 ﻿using CustomerConsole.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CustomerConsole.DataContexts;
 
@@ -65,5 +60,4 @@ public class CustomerDataStore
             },
         };
     }
- 
 }
